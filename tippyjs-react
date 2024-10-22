@@ -1,0 +1,35 @@
+import './App.css'
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
+// import { forwardRef } from 'react'  by chance used
+///case sensitive 
+// you can give any properties to the span tag
+const ToShow = ()=>{
+  return<span>This is tippy</span>
+}
+
+
+
+export default function App(){
+  return (
+    <div className='App'>
+      <div className='chart'>
+        <Tippy content={<ToShow/>} arrow={false} delay={1000} placement='right'>
+        <button >Clickme</button>
+        </Tippy>
+
+        <Tippy content="this is normal tippy">
+        <button >Clickme</button>
+        </Tippy>
+        
+        <Tippy content="this is somehow  tippy">
+          <span>hello</span>
+        </Tippy>
+
+
+      </div>
+     
+    </div>
+  )
+
+}
